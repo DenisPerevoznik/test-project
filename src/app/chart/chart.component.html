@@ -1,0 +1,17 @@
+<div style="display: block;">
+  <canvas baseChart *ngIf="chartType === ChartTypeEnum.Bar"
+          [datasets]="chartData.dataSource"
+          [labels]="chartData.labels"
+          [options]="{responsive: true}"
+          [legend]="true"
+          [chartType]="'bar'">
+  </canvas>
+
+  <canvas baseChart *ngIf="chartType === ChartTypeEnum.Line"
+          [datasets]="chartData.dataSource"
+          [labels]="chartData.labels"
+          [options]="{responsive: true}"
+          [legend]="true"
+          [chartType]="'line'">
+  </canvas>
+</div>
